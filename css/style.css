@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "lato", sans-serif;
+    text-align: center;
+}
+
+.formulariRegistre {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    height: auto;
+}
+
+.formulari {
+    background-color: gray;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.inputContainer {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+}
+
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 103%;
+    border: 1px solid #f3af00;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: white;
+    z-index: 1;
+}
+
+.input::placeholder {
+    color: #555;
+}
+
+/* .label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: transparent;
+    color: black;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 5;
+} */
+
+.label {
+    top: -20px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f3af00;
+    position: absolute;
+    padding: 0 4px;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: transparent;
+}
+
+.submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: #f3af00;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.submitBtn:hover {
+    background-color: #f3ae009e;
+    transform: translateY(-2px);
+}
+.input:focus + .label {
+    top: -20px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f3af00;
+}
+
+.input:not(:placeholder-shown)+ .label {
+    top: -20px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input:focus {
+    border: 2px solid #f3af00;
+}
+
+header {
+    background-color: gray;
+    align-items: center;
+    align-content: center;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 50px;
+}
+
+#navegacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav span.elementNav {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px 60px;
+
+}
+
+li > a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+li > a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.3s;
+
+}
+
+
+li > a:hover::after, li > a.active-nav::after {
+    width: 100%;
+    background: #100000;
+}
+
+
+hr.separadorCapçalera {
+    border: 1px solid #f3af00;
+    width: 75%;
+    background-color: #f3af00;
+}
+
+hr.invisible {
+    border: 1px solid transparent;
+    width: 50%;
+    background-color: transparent;
+}
+
+.llistat {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+.producte {
+    background-color: gray;
+    align-items: center;
+    width: 20%;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.categoria {
+    background-color: gray;
+    align-items: center;
+    width: 25%;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+img.portadaproducte {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.producte p.preu {
+    font-size: large;
+    font-weight: bold;
+}
+
+.detallProducte {
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 95%;
+    position: relative;
+    left: 1.25%;
+    border-radius: 8px;
+    padding: 80px 20px 140px 20px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.detallProducte img.disco {
+    display: block;
+    flex: 10%;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    width: 400px;
+    height: 400px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+
+.detallProducte img.portadadetall {
+    display: block;
+    flex: 10%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 400px;
+    height: 400px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.detallProducte .bttpreu .añadirCesta {
+    background-color:#c62d1f;
+    border-radius:14px;
+    border:1px solid #d02718;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Verdana;
+    position: relative;
+    /* top: -75px; */
+    /* right: 7%; */
+    font-size:17px;
+    padding:8px 60px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #810e05;
+    flex: inherit;
+    width: 300px;
+    margin: 25px 0px 25px 0px;
+}
+.detallProducte .bttpreu .añadirCesta:hover {
+    position: relative;
+    background-color:#f24437;
+}
+.detallProducte .bttpreu .añadirCesta:active {
+    position: relative;
+    top: 5px;
+}
+
+
+.detallProducte div.textdetall {
+    display: block;
+    position: relative;
+    left: 55%;
+    width: 600px;
+    height: 450px;
+}
+
+.detallProducte div.textdetall h3.artista {
+    font-size: 50px;
+    text-align: left;
+    font-weight: bold;
+    font-family: "Arial Black";
+    margin: 5px 0px 5px 0px;
+
+
+}
+
+.detallProducte div.textdetall p.nom {
+    font-size: 50px;
+    text-align: left;
+    font-family: Arial ;
+    margin: 10px 0px 10px 0px;
+    width: 500px;
+
+}
+
+.detallProducte div.textdetall p.descripcio{
+    font-size: 30px;
+    text-align: left;
+    font-family:"Calibri Light";
+    margin: 20px 0px 20px 0px;
+    width: 540px;
+}
+
+.detallProducte div.textdetall p.format {
+    font-size: 30px;
+    text-align: left;
+    font-family: "Arial Narrow" ;
+    margin: 20px 0px 20px 0px;
+}
+
+.detallProducte .textdetall .bttpreu{
+    margin: 30px 0px 0px 0px;
+    display: flex;
+    column-gap: 40px;
+}
+
+.detallProducte div.textdetall  p.preu {
+    text-align: left;
+    font-size: 35px;
+    font-family: Arial ;
+    color: #b33a3a;
+    flex: inherit;
+    width: 200px;
+}
+
+
+.dropbtn {
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f3af00;
+}
+
+
+input.quantitatProducte {
+    text-align: center;
+    width: 15px;
+    flex: inherit;
+    margin: 40px 0px 40px 0px;
+}
+
+.llistatComandes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+table.taulaComanda {
+    border: 5px solid #f3af00;
+    width: 100%;
+    border-color: #f3af00 #f3af00;
+    background: gray;
+    color: white;
+    border-collapse: collapse;
+}
+
+table.taulaComanda tr {
+    height: 30px;
+}
+
+table.taulaComanda tr.detallsProducteComanda {
+    background: #ddd;
+    color: black;
+}
+
+th.producteTaulaComanda {
+    width: 250px;
+}
+
+th.quantitatTaulaComanda {
+    width: 75px;
+}
+
+th.preuTaulaComanda {
+    width: 75px;
+}
+
+th.totalTaulaComanda {
+    width: 100px;
+}
+
+.dadesUsuari {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+
+
+
+
+.infoUsuari {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    height: auto;
+}
+
+form.formulariUsuari {
+    background-color: gray;
+    width: 600px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    margin-right: auto;
+    margin-left: auto;
+}
